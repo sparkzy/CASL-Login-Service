@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: login-service
+  profiles:
+    active: test
+  cloud:
+    config:
+      uri: http://localhost:${config.port:8888}
