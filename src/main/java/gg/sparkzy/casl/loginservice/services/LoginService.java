@@ -1,5 +1,7 @@
 package gg.sparkzy.casl.loginservice.services;
 
+import gg.sparkzy.casl.loginservice.entities.User;
+
 /**
  * User service interface for CASL
  * 
@@ -15,6 +17,7 @@ public interface LoginService {
 	/************************************************************************************
 	 * Read
 	 ************************************************************************************/
+	public User findByUsername(String username);
 
 	/************************************************************************************
 	 * Update
