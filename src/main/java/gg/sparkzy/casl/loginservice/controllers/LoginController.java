@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import gg.sparkzy.casl.loginservice.services.LoginService;
+
 @RestController
 @RequestMapping("/login")
 @RefreshScope // actuator/refresh
