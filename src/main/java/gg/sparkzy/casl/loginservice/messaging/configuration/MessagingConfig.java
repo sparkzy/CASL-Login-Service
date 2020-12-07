@@ -1,8 +1,9 @@
 package gg.sparkzy.casl.loginservice.messaging.configuration;
 
-import java.util.Queue;
-
 import org.springframework.amqp.core.AmqpTemplate;
+import org.springframework.amqp.core.Binding;
+import org.springframework.amqp.core.BindingBuilder;
+import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.core.TopicExchange;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -11,18 +12,16 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.google.inject.internal.BindingBuilder;
-
 @Configuration
 public class MessagingConfig {
 	
-	@Value("${queue.user}")
+	@Value("${messaging.queue}")
 	public String USER_QUEUE;	
 	
-	@Value("${exchange.user:user_exchange}")
+	@Value("${messaging.exchange}")
 	public String USER_EXCHANGE;	
 	
-	@Value("${routing_key.user:user_routingkey}")
+	@Value("${messaging.routing_key}")
 	public String USER_ROUTINGKEY;
 
 	@Bean
