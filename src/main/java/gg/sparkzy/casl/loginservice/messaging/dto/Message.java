@@ -68,7 +68,8 @@ public class Message<T> {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Message other = (Message) obj;
+		@SuppressWarnings("unchecked")
+		Message<T> other = (Message<T>) obj;
 		if (message == null) {
 			if (other.message != null)
 				return false;
